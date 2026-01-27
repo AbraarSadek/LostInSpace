@@ -8,15 +8,13 @@ public class Obstacle : MonoBehaviour
     void Start()
     {
         float randomSize = Random.Range(0.5f, 2.0f);
-        float randomForce = Random.Range(25f, 200f);
+        float randomForce = Random.Range(25f, 200f) / randomSize;
+        float randomTorque = Random.Range(-10f, 10f);
         Vector2 randomDirection = Random.insideUnitCircle;
         transform.localScale = new Vector3(randomSize, randomSize, 1);
         rb = GetComponent<Rigidbody2D>();
         rb.AddForce(randomDirection * randomForce);
+        rb.AddTorque(randomTorque);
     }
 
-    void Update()
-    {
-        
-    }
 }
