@@ -1,22 +1,43 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
+
 
 public class PlayerController : MonoBehaviour
 {
+    private float elapsedTime = 0f;
+    private float score = 0f;
+    public float scoreMultiplier = 10f;
+
     // How strong the thrust is when you click/hold the mouse
     public float thrustForce = 1f;
 
     // Reference to the Rigidbody2D on the Player
     private Rigidbody2D rb;
 
+    public UIDocument uiDocument;
+
+    private Label scoreText;
+
+
+
     void Start()
     {
         // Grab the Rigidbody2D component attached to this Player GameObject
         rb = GetComponent<Rigidbody2D>();
+        scoreText = uiDocument.rootVisualElement.Q<Label>("ScoreLabel");
     }
 
     void Update()
     {
+
+        elapsedTime += Time.deltaTime;
+        score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
+        Debug.Log("Score: " + score);
+        scoreText.text = "Score: " + score;
+
+
+
         // If the left mouse button is being pressed (held down)
         if (Mouse.current.leftButton.isPressed)
         {
