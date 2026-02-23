@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerController : MonoBehaviour {
 
@@ -14,6 +16,8 @@ public class PlayerController : MonoBehaviour {
     //Public Variables
     public float thrustForce = 1f; //Float variable that determines how much force is applied to the player when thrusting (moving towards the mouse)
     public UIDocument uIDocument; //Reference to the UI Document component that holds the UI elements for displaying the score
+    public GameObject explosionEffect;
+    private Button restartButton;
 
 
     void Start()
@@ -21,6 +25,11 @@ public class PlayerController : MonoBehaviour {
         // Grab the Rigidbody2D component attached to this Player GameObject
         rb = GetComponent<Rigidbody2D>();
         scoreText = uIDocument.rootVisualElement.Q<Label>("ScoreLabel"); //Get the Label element from the UI Document to display the score
+        restartButton = uIDocument.rootVisualElement.Q<Button>("RestartButton");
+        restartButton.style.display = DisplayStyle.None;
+        restartButton.clicked += ReloadScene;
+
+
     }
 
     void Update() {
@@ -69,6 +78,16 @@ public class PlayerController : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Destroy the player if it collides with anything
+        Instantiate(explosionEffect, transform.position, transform.rotation);
         Destroy(gameObject);
+        restartButton.style.display = DisplayStyle.Flex;
+
+
+    }
+
+    void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
     }
 }

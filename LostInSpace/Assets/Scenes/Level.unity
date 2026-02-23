@@ -1685,6 +1685,7 @@ MonoBehaviour:
   scoreMultiplier: 10
   thrustForce: 1
   uIDocument: {fileID: 796493232}
+  explosionEffect: {fileID: 8539825100101391090, guid: 95a00d4f8485c9a46ae21ced58f38d1e, type: 3}
 --- !u!1001 &3696373857508956648
 PrefabInstance:
   m_ObjectHideFlags: 0
