@@ -8,18 +8,18 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour {
 
 
-    //Private Variables - 
+    //Private Variables
     private Rigidbody2D rb; //Rigidbody2D variable that will be used to apply physics forces to the player GameObject
     private float elapsedTime = 0f; //Float variable that will keep track of how much time has passed since the game started
     private float score = 0f; //Float variable that will keep track of the player's score, which increases over time based on how long they survive
     public float scoreMultiplier = 10f; //Float variable that determines how much the score increases per second (score increase rate)
     private Label scoreText; //Label variable that will be used to display the player's score on the UI
     
-    //Public Variables - 
+    //Public Variables
     public float thrustForce = 1f; //Float variable that determines how much force is applied to the player when thrusting (moving towards the mouse)
     public UIDocument uIDocument; //Reference to the UI Document component that holds the UI elements for displaying the score
-    public GameObject explosionEffect;
-    private Button restartButton;
+    public GameObject explosionEffect; //Reference to the explosion effect prefab that will be instantiated when the player collides with an asteroid or other obstacle
+    private Button restartButton; //Reference to the Button element in the UI Document that will be used to restart the game after a player collision
 
     //Start Method - Called when the player GameObject is instantiated.
     void Start() {
