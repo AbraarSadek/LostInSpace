@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour {
     public float scoreMultiplier = 10f; //Float variable that determines how much the score increases per second (score increase rate)
     public GameObject explosionEffect; //Reference to the explosion effect prefab that will be instantiated when the player collides with an asteroid or other obstacle
     public GameObject boosterFlame; //Reference to the booster flame GameObject that will be activated when the player moving.
+    public GameObject borderParent; //Reference to the parent GameObject that contains the border colliders to prevent the player from moving off-screen.
 
     //Start Method - Called when the player GameObject is instantiated.
     void Start() {
@@ -97,6 +98,7 @@ public class PlayerController : MonoBehaviour {
         //Instantiate explosion effect at player's position and rotation when a collision occurs,
             //then destroy the player GameObject and display the restart button on the UI to allow the player to restart the game after a collision.
         Instantiate(explosionEffect, transform.position, transform.rotation);
+        borderParent.SetActive(false); //Disable the border colliders to allow the explosion effect to go off-screen without being blocked by the borders
         Destroy(gameObject); //Destroy the player GameObject upon collision
 
         //Show the restart button on the UI to allow the player to restart the game after a collision

@@ -6,9 +6,9 @@ public class Asteroids : MonoBehaviour {
     Rigidbody2D rb; //Rigidbody2D variable that will be used to apply physics forces to the asteroid GameObject
 
     //Public Variables - These variables can be adjusted in the Unity Inspector to control the behavior of the asteroids when they are spawned
-    public float minSize = 0.5f;
-    public float maxSize = 2.0f;
-    public float minForce = 75f;
+    public float minSize = 1f;
+    public float maxSize = 2.25f;
+    public float minForce = 100f;
     public float maxForce = 200f;
     public float torque = 10f;
 
