@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
     //It also handles player collisions and allows for restarting the game after a collision.
 public class PlayerController : MonoBehaviour {
 
-
     //Private Variables
     private Rigidbody2D rb; //Rigidbody2D variable that will be used to apply physics forces to the player GameObject
     private float elapsedTime = 0f; //Float variable that will keep track of how much time has passed since the game started
@@ -84,12 +83,9 @@ public class PlayerController : MonoBehaviour {
 
         //If-Else Statement - That Will Check If The Left Mouse Button Was Pressed This Frame To Activate The Booster Flame, 
         //And Check If It Was Released This Frame To Deactivate The Booster Flame.
-        if (Mouse.current.leftButton.wasPressedThisFrame)
-        {
+        if (Mouse.current.leftButton.wasPressedThisFrame) {
             boosterFlame.SetActive(true);
-        }
-        else if (Mouse.current.leftButton.wasReleasedThisFrame)
-        {
+        } else if (Mouse.current.leftButton.wasReleasedThisFrame) {
             boosterFlame.SetActive(false);
         } //End of If-Else Statement
 
