@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
+using TMPro;
 
 /*
  * Created By: Drew Oro
@@ -9,16 +11,23 @@ using UnityEngine.SceneManagement;
  * 
  * Last Modified By: Drew Oro
  * Last Modified Date: 03/31/2025
- * Last Modified Made: Copied from the MainMenu Manager, and applied the buttons
+ * Last Modified Made: Copied from the MainMenu Manager, and applied the buttons, applied High Score
  */
 
 public class GameOverManager : MonoBehaviour
 {
+    [Header("Panels")]
     public GameObject gameOverPanel;
     public GameObject mainMenuPanel;
+   
 
     [Header("Sound Button References:")]
     public Button soundButton;
+    [Header("Texts")]
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI highScoreText;
+    private float score;
+    private float highScore; 
 
     private void Start()
     {
@@ -57,5 +66,18 @@ public class GameOverManager : MonoBehaviour
         Debug.Log("Restart Button Clicked");
         PlayerPrefs.SetInt("ShouldAutoPlay", 1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void ApplyScore(float newScore)
+    {
+        score = newScore;
+        highScore = PlayerPrefs.GetFloat("highscore");
+        if (score > highScore)
+        {
+            highScore = score;
+            PlayerPrefs.SetFloat("highscore", score);
+        }
+
+        scoreText.text = $"SCORE: {score}";
+        highScoreText.text = $"HIGH SCORE: {highScore}";
     }
 }

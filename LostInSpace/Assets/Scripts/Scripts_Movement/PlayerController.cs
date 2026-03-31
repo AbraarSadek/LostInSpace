@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
   public GameObject explosionEffect; //Reference to the explosion effect prefab that will be instantiated when the player collides with an asteroid or other obstacle
   public GameObject boosterFlame; //Reference to the booster flame GameObject that will be activated when the player moving.
   public GameObject borderParent; //Reference to the parent GameObject that contains the border colliders to prevent the player from moving off-screen.
-
+    private GameOverManager gameOverManager;
   //Start Method - Called when the player GameObject is instantiated.
   void Start() {
 
@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour {
     restartButton.style.display = DisplayStyle.None;
     restartButton.clicked += ReloadScene;
 
+    gameOverManager = FindFirstObjectByType<GameOverManager>();
   } //End of Start Method
 
   //Update Method - Called once per frame to handle player movement and score updates.
@@ -105,8 +106,9 @@ public class PlayerController : MonoBehaviour {
                                  //Show the restart button on the UI to allow the player to restart the game after a collision
                                  // restartButton.style.display = DisplayStyle.Flex;
         uIDocument.enabled = false;
+        gameOverManager.ApplyScore(score);
         Debug.Log("Game Over (Player Controller)");
-    FindFirstObjectByType<GameOverManager>().activateGameOverPanel(true); //Please change this with a variable at void Start!
+    gameOverManager.activateGameOverPanel(true); //Please change this with a variable at void Start!
 
   } //End of OnCollisionEnter2D Method
 

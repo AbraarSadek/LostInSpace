@@ -6354,6 +6354,8 @@ MonoBehaviour:
   gameOverPanel: {fileID: 232604563}
   mainMenuPanel: {fileID: 1000953656}
   soundButton: {fileID: 1689222659}
+  scoreText: {fileID: 825581991}
+  highScoreText: {fileID: 1192572942}
 --- !u!1 &747805348 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3546322784210977509, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
