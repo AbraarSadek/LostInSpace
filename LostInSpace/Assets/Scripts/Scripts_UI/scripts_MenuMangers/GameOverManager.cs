@@ -1,16 +1,24 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GameOverManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public GameObject gameOverPanel;
+    private void Start()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    public void activateGameOverPanel(bool isActive)
     {
-        
+        gameOverPanel.SetActive(isActive);
+        if (gameOverPanel.activeInHierarchy == true) {
+            Debug.Log("Activate GameOver Panel");
+            gameOverPanel.SetActive(true);
+            
+        }
+        else
+        {
+            gameOverPanel.SetActive(false);
+        }
     }
 }

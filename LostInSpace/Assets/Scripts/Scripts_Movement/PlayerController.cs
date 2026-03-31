@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour {
 
     //Get the Label element from the UI Document to display the score
     scoreText = uIDocument.rootVisualElement.Q<Label>("ScoreLabel");
-
     //Get the Button element from the UI Document to handle restarting the game after a player destruction
     restartButton = uIDocument.rootVisualElement.Q<Button>("RestartButton"); 
     restartButton.style.display = DisplayStyle.None;
@@ -103,9 +102,11 @@ public class PlayerController : MonoBehaviour {
 
     //Disable the player GameObject to hide it without destroying (preserves object for reuse or inspection)
     gameObject.SetActive(false); //Hide/disable the player GameObject upon collision
-
-    //Show the restart button on the UI to allow the player to restart the game after a collision
-    restartButton.style.display = DisplayStyle.Flex;
+                                 //Show the restart button on the UI to allow the player to restart the game after a collision
+                                 // restartButton.style.display = DisplayStyle.Flex;
+        uIDocument.enabled = false;
+        Debug.Log("Game Over (Player Controller)");
+    FindFirstObjectByType<GameOverManager>().activateGameOverPanel(true); //Please change this with a variable at void Start!
 
   } //End of OnCollisionEnter2D Method
 
