@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour {
     elapsedTime += Time.deltaTime; //Increment elapsed time by the time that has passed since the last frame
     score = Mathf.FloorToInt(elapsedTime * scoreMultiplier); //Calculate the player's score based on elapsed time and the score multiplier
     
-    Debug.Log("Score: " + score);
+    //Debug.Log("Score: " + score);
 
     scoreText.text = "Score: " + score; //Update the score text on the UI to reflect the current score
 

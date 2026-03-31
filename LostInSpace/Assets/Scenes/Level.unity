@@ -5731,9 +5731,6 @@ MonoBehaviour:
   player: {fileID: 2115840753}
   playerUI: {fileID: 796493231}
   soundButton: {fileID: 1177560245}
-  targetGraphic: {fileID: -101468003, guid: ccdb665030d096444a157cf406154a55, type: 3}
-  selectedSprite: {fileID: -811998301, guid: e52d13d044156be4a89dfa57422366bc, type: 3}
-  backgroundMusic: {fileID: 1645503782}
 --- !u!1 &612285994
 GameObject:
   m_ObjectHideFlags: 0
@@ -6356,6 +6353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameOverManager
   gameOverPanel: {fileID: 232604563}
   mainMenuPanel: {fileID: 1000953656}
+  soundButton: {fileID: 1689222659}
 --- !u!1 &747805348 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3546322784210977509, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
@@ -8334,7 +8332,7 @@ GameObject:
   - component: {fileID: 1458115604}
   - component: {fileID: 1458115603}
   m_Layer: 5
-  m_Name: button_Play
+  m_Name: button_Replay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8403,9 +8401,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: OnPlayButtonClick
+      - m_Target: {fileID: 712028193}
+        m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
+        m_MethodName: OnRestartButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8874,8 +8872,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+      - m_Target: {fileID: 712028193}
+        m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
         m_MethodName: OnSoundButtonClick
         m_Mode: 1
         m_Arguments:
@@ -9305,7 +9303,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 1330490619, guid: e52d13d044156be4a89dfa57422366bc, type: 3}
+    m_PressedSprite: {fileID: 1881944724, guid: e52d13d044156be4a89dfa57422366bc, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -9351,7 +9349,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 397364113, guid: ccdb665030d096444a157cf406154a55, type: 3}
+  m_Sprite: {fileID: -1464677402, guid: ccdb665030d096444a157cf406154a55, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9571,6 +9569,55 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3546322784210977509, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
   m_PrefabInstance: {fileID: 3696373857508956648}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2014543687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2014543689}
+  - component: {fileID: 2014543688}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2014543688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014543687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b434032fb0d9ff49b87b44ca880bd4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+  backgroundMusic: {fileID: 1645503782}
+  soundOnSprite: {fileID: -101468003, guid: ccdb665030d096444a157cf406154a55, type: 3}
+  soundOffSprite: {fileID: 1357703740, guid: ccdb665030d096444a157cf406154a55, type: 3}
+  soundOnPressedSprite: {fileID: 1927710819, guid: e52d13d044156be4a89dfa57422366bc, type: 3}
+  soundOffPressedSprite: {fileID: -811998301, guid: e52d13d044156be4a89dfa57422366bc, type: 3}
+--- !u!4 &2014543689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014543687}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.05455, y: -1.77432, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2065989901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2420873115371464007, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
@@ -9754,3 +9801,4 @@ SceneRoots:
   - {fileID: 796493233}
   - {fileID: 267596873}
   - {fileID: 1164873794}
+  - {fileID: 2014543689}
