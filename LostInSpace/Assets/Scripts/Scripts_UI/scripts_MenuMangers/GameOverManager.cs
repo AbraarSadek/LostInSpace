@@ -37,4 +37,10 @@ public class GameOverManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     } 
+    public void OnRestartButtonClick()
+    {
+        Debug.Log("Restart Button Clicked");
+        PlayerPrefs.SetInt("ShouldAutoPlay", 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

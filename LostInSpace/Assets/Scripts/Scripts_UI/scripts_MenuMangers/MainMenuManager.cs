@@ -30,10 +30,10 @@ public class MainMenuManager : MonoBehaviour {
     public AudioSource backgroundMusic; //AudioSource that plays background music (assign in Inspector)
 
     private bool isSoundOn; //Tracks whether background music is currently on
+    
 
     //Start - Called once when script is first initialized
     private void Start() {
-
         //If-Statement - Derive initial sound state from AudioSource if available; default to true when absent
         if (backgroundMusic != null) {
             isSoundOn = backgroundMusic.isPlaying;
@@ -50,19 +50,28 @@ public class MainMenuManager : MonoBehaviour {
         if (backgroundMusic != null) {
 
             if (isSoundOn) {
-                if (!backgroundMusic.isPlaying) { backgroundMusic.Play(); }
-            } else { 
+                if (!backgroundMusic.isPlaying) {
+                    PlayerPrefs.SetInt("isSoundOn", 1);
+                    backgroundMusic.Play(); 
+                }
+            } else {
+                PlayerPrefs.SetInt("isSoundOn", 0);
                 backgroundMusic.Pause(); 
             }
 
         } //End of If-Statement
-
+        if (PlayerPrefs.GetInt("ShouldAutoPlay", 0) == 1)
+        {
+            Debug.Log("AutoPlay");
+            PlayerPrefs.DeleteKey("ShouldAutoPlay");
+            OnPlayButtonClick();
+        }
     } //End of Start Method
 
     //OnPlayButtonClick - toggles main menu visibility and enables/disables the player
     public void OnPlayButtonClick() {
 
-        //If-Statement - If the main menu is active, start the game (hide menu and enable player and player UI).
+        //If-Statement - If the main menu is active, start the game (hide menu and enable player and player UI
         if (mainMenu.activeInHierarchy == true) {
 
             Debug.Log("Play button clicked. Starting game...");
