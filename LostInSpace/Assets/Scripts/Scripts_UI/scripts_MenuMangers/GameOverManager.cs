@@ -20,9 +20,9 @@ public class GameOverManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject mainMenuPanel;
    
-
     [Header("Sound Button References:")]
     public Button soundButton;
+
     [Header("Texts")]
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScoreText;
@@ -56,6 +56,7 @@ public class GameOverManager : MonoBehaviour
             SoundManager.Instance.ToggleSound();
         }
     }
+
     public void OnHomeButtonClick()
     {
         Debug.Log("Home button clicked. Heading Home");
