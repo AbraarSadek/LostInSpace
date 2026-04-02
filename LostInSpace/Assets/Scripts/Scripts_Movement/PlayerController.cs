@@ -20,7 +20,8 @@ public class PlayerController : MonoBehaviour {
   public float scoreMultiplier = 10f; //Float variable that determines how much the score increases per second (score increase rate)
   public GameObject explosionEffect; //Reference to the explosion effect prefab that will be instantiated when the player collides with an asteroid or other obstacle
   public GameObject boosterFlame; //Reference to the booster flame GameObject that will be activated when the player moving.
-  public GameObject borderParent; //Reference to the parent GameObject that contains the border colliders to prevent the player from moving off-screen.
+    public AudioSource thrusterAudio;
+  public GameObject borderParent; //Reference to the parent GameObject that contains the border colliders to prevent the player from moving off-screen
     private GameOverManager gameOverManager;
   //Start Method - Called when the player GameObject is instantiated.
   void Start() {
@@ -86,9 +87,11 @@ public class PlayerController : MonoBehaviour {
     //And Check If It Was Released This Frame To Deactivate The Booster Flame.
     if (Mouse.current.leftButton.wasPressedThisFrame) {
       boosterFlame.SetActive(true);
+            thrusterAudio.Play();
     } else if (Mouse.current.leftButton.wasReleasedThisFrame) {
       boosterFlame.SetActive(false);
-    } //End of If-Else Statement
+            thrusterAudio.Stop();
+        } //End of If-Else Statement
 
   } //End of MovePlayer Method
 

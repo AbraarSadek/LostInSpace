@@ -5724,6 +5724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenuManager
   pauseMenuPanel: {fileID: 1674789443}
+  soundButton: {fileID: 0}
 --- !u!1 &552326115
 GameObject:
   m_ObjectHideFlags: 0
