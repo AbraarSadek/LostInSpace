@@ -5915,6 +5915,9 @@ MonoBehaviour:
   player: {fileID: 2115840753}
   playerUI: {fileID: 796493231}
   soundButton: {fileID: 1177560245}
+  audioSoundEffects:
+  - {fileID: 1645503782}
+  - {fileID: 1387968934}
 --- !u!1 &604909973
 GameObject:
   m_ObjectHideFlags: 0
@@ -8676,7 +8679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1387968932
 Transform:
   m_ObjectHideFlags: 0
@@ -8762,11 +8765,11 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 823673cddd2b5814bba3f801f1c522d5, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -10335,11 +10338,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b434032fb0d9ff49b87b44ca880bd4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
-  backgroundMusic: {fileID: 1645503782}
   soundOnSprite: {fileID: -101468003, guid: ccdb665030d096444a157cf406154a55, type: 3}
   soundOffSprite: {fileID: 1357703740, guid: ccdb665030d096444a157cf406154a55, type: 3}
   soundOnPressedSprite: {fileID: 1927710819, guid: e52d13d044156be4a89dfa57422366bc, type: 3}
   soundOffPressedSprite: {fileID: -811998301, guid: e52d13d044156be4a89dfa57422366bc, type: 3}
+  mainMenuManager: {fileID: 0}
 --- !u!4 &2014543689
 Transform:
   m_ObjectHideFlags: 0
@@ -10460,6 +10463,8 @@ MonoBehaviour:
   scoreMultiplier: 2
   explosionEffect: {fileID: 8539825100101391090, guid: 95a00d4f8485c9a46ae21ced58f38d1e, type: 3}
   boosterFlame: {fileID: 1736404995}
+  thrusterAudio: {fileID: 1387968934}
+  backgroundAudio: {fileID: 1645503782}
   borderParent: {fileID: 1846543511}
 --- !u!1001 &3696373857508956648
 PrefabInstance:

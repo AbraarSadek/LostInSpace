@@ -17,7 +17,7 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
 
-    public AudioSource backgroundMusic;
+    private List<AudioSource> audioSoundEffects;
     public Sprite soundOnSprite;
     public Sprite soundOffSprite;
     public Sprite soundOnPressedSprite;
@@ -25,6 +25,8 @@ public class SoundManager : MonoBehaviour
 
     private bool isSoundOn;
     private List<Button> registeredButtons = new List<Button>();
+
+    public MainMenuManager mainMenuManager;
 
     private void Awake()
     {
@@ -37,20 +39,14 @@ public class SoundManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         isSoundOn = PlayerPrefs.GetInt("IsSoundOn", 1) == 1;
-
-        if (backgroundMusic != null) {
-            if (isSoundOn) {
-                if (!backgroundMusic.isPlaying) { backgroundMusic.Play(); }
-            } else {
-                backgroundMusic.Pause();
-            }
-        }
+        ApplySound();
     }
 
     public bool IsSoundOn() {
         return isSoundOn;
     }
 
+ 
     public void RegisterButton(Button button)
     {
         if (button == null) return;
@@ -62,21 +58,22 @@ public class SoundManager : MonoBehaviour
         UpdateButtonSprite(button);
     }
 
-
+    public void ApplySound()
+    {   
+        mainMenuManager = FindFirstObjectByType<MainMenuManager>();
+        audioSoundEffects = mainMenuManager.audioSoundEffects;
+        for (int i = 0; i < audioSoundEffects.Count; i++)
+        {
+            audioSoundEffects[i].mute = !isSoundOn;
+        }
+    }
 
     public void ToggleSound()
     {
         isSoundOn = !isSoundOn;
         PlayerPrefs.SetInt("IsSoundOn", isSoundOn ? 1 : 0);
 
-        if (backgroundMusic != null) {
-            if (isSoundOn) {
-                backgroundMusic.UnPause();
-                if (!backgroundMusic.isPlaying) { backgroundMusic.Play(); }
-            } else {
-                backgroundMusic.Pause();
-            }
-        }
+        ApplySound();
 
         StartCoroutine(UpdateSpritesNextFrame());
 

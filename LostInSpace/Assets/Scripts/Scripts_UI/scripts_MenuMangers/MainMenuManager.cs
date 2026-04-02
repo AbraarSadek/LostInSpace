@@ -24,19 +24,24 @@ public class MainMenuManager : MonoBehaviour {
 
     [Header("Sound Button References:")]
     public Button soundButton;
-
+    [Header("Sound Effects")]
+    public List<AudioSource> audioSoundEffects = new List<AudioSource>();
     //Start - Called once when script is first initialized
     private void Start() {
 
+
+        
         if (SoundManager.Instance != null && soundButton != null) {
             SoundManager.Instance.RegisterButton(soundButton);
         }
-
+        
         if (PlayerPrefs.GetInt("ShouldAutoPlay", 0) == 1) {
             Debug.Log("AutoPlay");
             PlayerPrefs.DeleteKey("ShouldAutoPlay");
             OnPlayButtonClick();
         }
+        SoundManager.Instance.ApplySound();
+
 
     } //End of Start Method
 
