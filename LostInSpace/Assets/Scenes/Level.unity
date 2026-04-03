@@ -5724,7 +5724,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenuManager
   pauseMenuPanel: {fileID: 1674789443}
-  soundButton: {fileID: 0}
+  mainMenuPanel: {fileID: 1000953656}
+  gameOverPanel: {fileID: 232604563}
+  soundButton: {fileID: 604909975}
 --- !u!1 &552326115
 GameObject:
   m_ObjectHideFlags: 0
@@ -5807,9 +5809,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: OnExitButtonClick
+      - m_Target: {fileID: 510420045}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: OnHomeButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6000,8 +6002,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+      - m_Target: {fileID: 510420045}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
         m_MethodName: OnSoundButtonClick
         m_Mode: 1
         m_Arguments:
@@ -9200,9 +9202,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
-        m_MethodName: OnPlayButtonClick
+      - m_Target: {fileID: 510420045}
+        m_TargetAssemblyTypeName: PauseMenuManager, Assembly-CSharp
+        m_MethodName: OnUnpauseButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10342,7 +10344,7 @@ MonoBehaviour:
   soundOffSprite: {fileID: 1357703740, guid: ccdb665030d096444a157cf406154a55, type: 3}
   soundOnPressedSprite: {fileID: 1927710819, guid: e52d13d044156be4a89dfa57422366bc, type: 3}
   soundOffPressedSprite: {fileID: -811998301, guid: e52d13d044156be4a89dfa57422366bc, type: 3}
-  mainMenuManager: {fileID: 0}
+  mainMenuManager: {fileID: 583580724}
 --- !u!4 &2014543689
 Transform:
   m_ObjectHideFlags: 0

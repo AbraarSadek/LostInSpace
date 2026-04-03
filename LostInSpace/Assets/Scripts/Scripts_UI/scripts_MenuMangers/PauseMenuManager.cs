@@ -8,6 +8,8 @@ public class PauseMenuManager : MonoBehaviour {
 
     [Header("Panels")]
     public GameObject pauseMenuPanel; // Reference to the pause menu UI panel
+    public GameObject mainMenuPanel; // Reference to the main menu UI panel - used to prevent pausing while main menu is shown
+    public GameObject gameOverPanel; // Reference to the game over UI panel - used to prevent pausing while game over is shown
 
     [Header("Audio References:")]
     public Button soundButton; // Button used to toggle sound via SoundManager
@@ -24,6 +26,14 @@ public class PauseMenuManager : MonoBehaviour {
             Debug.LogWarning("PauseMenuManager: pauseMenuPanel is not assigned in the inspector.");
         } //End of If-Statement
 
+        if (mainMenuPanel == null) {
+            Debug.LogWarning("PauseMenuManager: mainMenuPanel is not assigned in the inspector.");
+        } //End of If-Statement
+
+        if (gameOverPanel == null) {
+            Debug.LogWarning("PauseMenuManager: gameOverPanel is not assigned in the inspector.");
+        } //End of If-Statement
+
     } //End of Start Method
 
     // Update is called once per frame - Poll for pause/unpause input each frame.
@@ -34,20 +44,31 @@ public class PauseMenuManager : MonoBehaviour {
     // Toggle the pause menu when the pause key is pressed.
     public void ActivatePauseMenuPanel () {
 
-        //Ensure we have a panel reference before attempting to toggle it.
+        // Ensure we have a panel reference before attempting to toggle it.
         if (pauseMenuPanel == null) {
             return;
         } //End of If-Statement
 
+        // Check for pause/unpause key press.
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape)) {
 
             Debug.Log("Pause button pressed. Toggling pause menu...");
 
+            // If the pause menu is already visible, always allow closing it.
             if (pauseMenuPanel.activeInHierarchy == true) {
                 // If the pause menu is active, hide it and resume time.
                 pauseMenuPanel.SetActive(false);
                 Time.timeScale = 1f; // Resume the game
             } else {
+                // Before opening the pause menu, prevent activation if the main menu or game over panels are active.
+                // This stops pause from being opened while in main menu or during game over.
+                if ((mainMenuPanel != null && mainMenuPanel.activeInHierarchy == true)
+                    || (gameOverPanel != null && gameOverPanel.activeInHierarchy == true)) {
+
+                    Debug.Log("PauseMenuManager: Pause menu will not open because Main Menu or Game Over panel is active.");
+                    return;
+                } //End of If-Statement
+
                 // If the pause menu is inactive, show it and pause time.
                 pauseMenuPanel.SetActive(true);
                 Time.timeScale = 0f; // Pause the game
