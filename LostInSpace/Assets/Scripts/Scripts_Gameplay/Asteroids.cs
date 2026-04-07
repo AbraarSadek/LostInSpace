@@ -15,8 +15,8 @@ public class Asteroids : MonoBehaviour {
     Rigidbody2D rb; 
     private float minSize = 1f;
     private float maxSize = 2.25f;
-    private float minForce = 200f;
-    private float maxForce = 400f;
+    private float minForce = 300f;
+    private float maxForce = 500f;
     private float torque = 40f;
 
     void Start() {

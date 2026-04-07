@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 /*
  * Created By: Abraar Sadek
@@ -33,6 +34,9 @@ public class PlayerController : MonoBehaviour {
   public GameObject borderParent; //Reference to the parent GameObject that contains the border colliders to prevent the player from moving off-screen
     private GameOverManager gameOverManager;
     private MainMenuManager mainMenuManager;
+    public GameObject asteroidPrefab;
+    private float spawnAsteroidTime = 0f;
+    private float secondsToSpawnAsteroid = 10f;
   //Start Method - Called when the player GameObject is instantiated.
   void Start() {
 
@@ -65,6 +69,11 @@ public class PlayerController : MonoBehaviour {
 
     scoreText.text = "Score: " + score; //Update the score text on the UI to reflect the current score
 
+    if (elapsedTime-spawnAsteroidTime >= secondsToSpawnAsteroid)
+        {
+            Instantiate(asteroidPrefab);
+            spawnAsteroidTime = elapsedTime;
+        }
   } //End of UpdateScore Method
 
   //MovePlayer Method - Responsible for moving the player towards the mouse position when the left mouse button is pressed.
