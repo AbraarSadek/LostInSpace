@@ -34,9 +34,12 @@ public class PlayerController : MonoBehaviour {
   public GameObject borderParent; //Reference to the parent GameObject that contains the border colliders to prevent the player from moving off-screen
     private GameOverManager gameOverManager;
     private MainMenuManager mainMenuManager;
+
     public GameObject asteroidPrefab;
-    private float spawnAsteroidTime = 0f;
-    private float secondsToSpawnAsteroid = 10f;
+    private float scoreCount = 0f;
+    private float scoreSpawnRate = 10f;
+    private float maxScoreSpawnRate = 200f;
+    public PhysicsMaterial2D AsteroidMaterial; 
   //Start Method - Called when the player GameObject is instantiated.
   void Start() {
 
@@ -69,10 +72,14 @@ public class PlayerController : MonoBehaviour {
 
     scoreText.text = "Score: " + score; //Update the score text on the UI to reflect the current score
 
-    if (elapsedTime-spawnAsteroidTime >= secondsToSpawnAsteroid)
+    if (score - scoreCount >= scoreSpawnRate)
         {
             Instantiate(asteroidPrefab);
-            spawnAsteroidTime = elapsedTime;
+            scoreCount = score;
+            if (scoreSpawnRate <= maxScoreSpawnRate) {
+                scoreSpawnRate = scoreSpawnRate * 1.5f;
+                AsteroidMaterial.bounciness += 0.05f;
+            }
         }
   } //End of UpdateScore Method
 

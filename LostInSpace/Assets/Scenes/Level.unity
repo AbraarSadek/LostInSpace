@@ -10458,6 +10458,8 @@ MonoBehaviour:
   thrusterAudio: {fileID: 1387968934}
   backgroundAudio: {fileID: 1645503782}
   borderParent: {fileID: 1846543511}
+  asteroidPrefab: {fileID: 1998846766}
+  AsteroidMaterial: {fileID: 6200000, guid: 478363ca3776a014abb7691e73eb9e39, type: 2}
 --- !u!1001 &3696373857508956648
 PrefabInstance:
   m_ObjectHideFlags: 0
