@@ -5225,6 +5225,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
     - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300018, guid: a5f55b36d5d639a4f96ad12950ab6f0f, type: 3}
+    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
@@ -6481,11 +6485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472612fd9abe38346a163d60186cb044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Asteroids
-  minSize: 1
-  maxSize: 2.25
-  minForce: 100
-  maxForce: 200
-  torque: 10
 --- !u!1 &698529861
 GameObject:
   m_ObjectHideFlags: 0
@@ -7413,11 +7412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472612fd9abe38346a163d60186cb044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Asteroids
-  minSize: 1
-  maxSize: 2.25
-  minForce: 100
-  maxForce: 200
-  torque: 10
 --- !u!1001 &1082062024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7426,6 +7420,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
+    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300020, guid: a5f55b36d5d639a4f96ad12950ab6f0f, type: 3}
     - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -8462,11 +8460,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472612fd9abe38346a163d60186cb044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Asteroids
-  minSize: 1
-  maxSize: 2.25
-  minForce: 100
-  maxForce: 200
-  torque: 10
 --- !u!1 &1350000940
 GameObject:
   m_ObjectHideFlags: 0
@@ -8607,6 +8600,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
+    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300016, guid: a5f55b36d5d639a4f96ad12950ab6f0f, type: 3}
     - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -9681,11 +9678,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472612fd9abe38346a163d60186cb044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Asteroids
-  minSize: 1
-  maxSize: 2.25
-  minForce: 100
-  maxForce: 200
-  torque: 10
 --- !u!1 &1736404995
 GameObject:
   m_ObjectHideFlags: 0
@@ -9920,6 +9912,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
+    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300014, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
     - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -10236,11 +10232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472612fd9abe38346a163d60186cb044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Asteroids
-  minSize: 1
-  maxSize: 2.25
-  minForce: 100
-  maxForce: 200
-  torque: 10
 --- !u!1001 &1976161256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10249,6 +10240,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
+    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300022, guid: a5f55b36d5d639a4f96ad12950ab6f0f, type: 3}
     - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -10377,11 +10372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 472612fd9abe38346a163d60186cb044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Asteroids
-  minSize: 1
-  maxSize: 2.25
-  minForce: 100
-  maxForce: 200
-  torque: 10
 --- !u!1 &2115840753
 GameObject:
   m_ObjectHideFlags: 0
@@ -10476,6 +10466,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
+    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300018, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
     - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_SortingOrder
       value: 1

@@ -3,8 +3,16 @@ using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
-//PlayerController Class - Responsible for controlling the player's movement towards the mouse position when the left mouse button is pressed, as well as keeping track of the player's score based on how long they survive in the game.
-  //It also handles player collisions and allows for restarting the game after a collision.
+/*
+ * Created By: Abraar Sadek
+ * Created Date: N/A
+ * Purpose: Responsible for controlling the player's movement towards the mouse position when the left mouse button is pressed, as well as keeping track of the player's score based on how long they survive in the game.
+ * It also handles player collisions and allows for restarting the game after a collision.
+ * 
+ * Last Modified By: Drew Oro
+ * Last Modified Date: 04/07/2026
+ * Last Modified Made: Code Check for Quality Assurance
+ */
 public class PlayerController : MonoBehaviour {
 
   //Private Variables
@@ -32,12 +40,7 @@ public class PlayerController : MonoBehaviour {
     rb = GetComponent<Rigidbody2D>();
 
     //Get the Label element from the UI Document to display the score
-    scoreText = uIDocument.rootVisualElement.Q<Label>("ScoreLabel");
-    //Get the Button element from the UI Document to handle restarting the game after a player destruction
-    restartButton = uIDocument.rootVisualElement.Q<Button>("RestartButton"); 
-    restartButton.style.display = DisplayStyle.None;
-    restartButton.clicked += ReloadScene;
-        
+    scoreText = uIDocument.rootVisualElement.Q<Label>("ScoreLabel");    
         gameOverManager = FindFirstObjectByType<GameOverManager>();
         mainMenuManager = FindFirstObjectByType<MainMenuManager>();
         SoundManager.Instance.ApplySound();
