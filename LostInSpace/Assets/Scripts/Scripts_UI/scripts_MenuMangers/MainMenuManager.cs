@@ -26,7 +26,6 @@ public class MainMenuManager : MonoBehaviour {
     public Button soundButton;
     [Header("Sound Effects")]
     public List<AudioSource> audioSoundEffects = new List<AudioSource>();
-    //Start - Called once when script is first initialized
     private void Start() {
 
 
@@ -43,13 +42,10 @@ public class MainMenuManager : MonoBehaviour {
         SoundManager.Instance.ApplySound();
 
 
-    } //End of Start Method
+    }
 
 
-    //OnPlayButtonClick - toggles main menu visibility and enables/disables the player
     public void OnPlayButtonClick() {
-
-        //If-Statement - If the main menu is active, start the game (hide menu and enable player and player UI)
         if (mainMenu.activeInHierarchy == true) {
 
             Debug.Log("Play button clicked. Starting game...");
@@ -57,16 +53,15 @@ public class MainMenuManager : MonoBehaviour {
             player.SetActive(true);
             playerUI.SetActive(true);
 
-          //Otherwise show the main menu and disable the player and player UI.
         } else if (mainMenu.activeInHierarchy == false) {
 
             mainMenu.SetActive(true);
             player.SetActive(false);
             playerUI.SetActive(false);
 
-        } //End of If-Statement
+        }
 
-    } //End of OnPlayButtonClick Method
+    } 
 
     public void OnSoundButtonClick() {
         if (SoundManager.Instance != null) {
@@ -75,12 +70,11 @@ public class MainMenuManager : MonoBehaviour {
         }
     }
 
-    //OnExitButtonClick - quits the application
     public void OnExitButtonClick() {
 
         Debug.Log("Exit button clicked. Quitting application...");
         Application.Quit();
 
-    } //End of OnExitButtonClick Method
+    } 
 
-} //End of MainMenuManager Class
+}
