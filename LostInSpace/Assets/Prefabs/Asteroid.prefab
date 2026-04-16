@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2392142433396417591}
   - component: {fileID: 2205966285556042863}
   - component: {fileID: 1175391640457871514}
-  - component: {fileID: -5359452795120773081}
+  - component: {fileID: -8586866638032658129}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Untagged
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -712631045867808456, guid: b670ab75dde984907b8570040daa08c5, type: 3}
   m_Color: {r: 0.79554033, g: 0.28223523, b: 0, a: 1}
   m_FlipX: 0
@@ -173,7 +173,7 @@ PolygonCollider2D:
       - {x: 0.5, y: 0}
       - {x: 0.25, y: 0.43359375}
   m_UseDelaunayMesh: 0
---- !u!114 &-5359452795120773081
+--- !u!114 &-8586866638032658129
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,4 +184,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 472612fd9abe38346a163d60186cb044, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  m_EditorClassIdentifier: Assembly-CSharp::Asteroids
+  minSize: 1
+  maxSize: 2.25
+  minForce: 100
+  maxForce: 200
+  torque: 10

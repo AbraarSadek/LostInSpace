@@ -1,66 +1,115 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
+using UnityEditor;
 
-
+/*
+ * Created By: Abraar Sadek
+ * Created Date: N/A
+ * Purpose: Responsible for controlling the player's movement towards the mouse position when the left mouse button is pressed, as well as keeping track of the player's score based on how long they survive in the game.
+ * It also handles player collisions and allows for restarting the game after a collision.
+ * 
+ * Last Modified By: Drew Oro
+ * Last Modified Date: 04/07/2026
+ * Last Modified Made: Code Check for Quality Assurance
+ */
 public class PlayerController : MonoBehaviour
 {
+
+    private Rigidbody2D rb;
     private float elapsedTime = 0f;
     private float score = 0f;
-    public float scoreMultiplier = 10f;
-
-    // How strong the thrust is when you click/hold the mouse
-    public float thrustForce = 1f;
-
-    // Reference to the Rigidbody2D on the Player
-    private Rigidbody2D rb;
-
-    public UIDocument uiDocument;
-
     private Label scoreText;
+    private Button restartButton;
+    private float scoreCount = 0f;
+    private float scoreSpawnRate = 10f;
+    private float maxScoreSpawnRate = 200f;
+    private GameOverManager gameOverManager;
+    private MainMenuManager mainMenuManager;
 
-
+    public float thrustForce = 1f;
+    public UIDocument uIDocument;
+    public GameObject explosionEffect;
+    public GameObject boosterFlame;
+    public AudioSource thrusterAudio;
+    public AudioSource backgroundAudio;
+    public GameObject borderParent;
+    public GameObject asteroidPrefab;
+    public PhysicsMaterial2D AsteroidMaterial;
 
     void Start()
     {
-        // Grab the Rigidbody2D component attached to this Player GameObject
         rb = GetComponent<Rigidbody2D>();
-        scoreText = uiDocument.rootVisualElement.Q<Label>("ScoreLabel");
+        scoreText = uIDocument.rootVisualElement.Q<Label>("ScoreLabel");
+        gameOverManager = FindFirstObjectByType<GameOverManager>();
+        mainMenuManager = FindFirstObjectByType<MainMenuManager>();
+        SoundManager.Instance.ApplySound();
     }
 
     void Update()
     {
+        UpdateScore();
+        MovePlayer();
+    }
 
-        elapsedTime += Time.deltaTime;
-        score = Mathf.FloorToInt(elapsedTime * scoreMultiplier);
-        Debug.Log("Score: " + score);
-        scoreText.text = "Score: " + score;
-
-
-
-        // If the left mouse button is being pressed (held down)
-        if (Mouse.current.leftButton.isPressed)
+    void SpawnAsteroid()
+    {
+        if (score - scoreCount >= scoreSpawnRate)
         {
-            // Get mouse position in SCREEN coordinates (pixels)
-            Vector3 mouseScreenPos = Mouse.current.position.value;
-
-            // Convert mouse position from SCREEN space to WORLD space
-            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
-
-            // Direction from player -> mouse (as a Vector2 for 2D)
-            Vector2 direction = (mouseWorldPos - transform.position).normalized;
-
-            // Rotate the player so its "up" direction points toward the mouse
-            transform.up = direction;
-
-            // Apply force in that direction (thrust)
-            rb.AddForce(direction * thrustForce);
+            Instantiate(asteroidPrefab);
+            scoreCount = score;
+            if (scoreSpawnRate <= maxScoreSpawnRate)
+            {
+                scoreSpawnRate = scoreSpawnRate * 1.5f;
+                AsteroidMaterial.bounciness += 0.05f;
+            }
         }
     }
+    void UpdateScore()
+    {
+        elapsedTime += Time.deltaTime;
+        score = Mathf.FloorToInt(elapsedTime * 1.25f);
+        scoreText.text = "Score: " + score;
+        SpawnAsteroid();
 
+    }
+    void MovePlayer()
+    {
+        if (Mouse.current.leftButton.isPressed)
+        {
+            Vector3 mouseScreenPos = Mouse.current.position.value;
+            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
+            Vector2 direction = (mouseWorldPos - transform.position).normalized;
+            transform.up = direction;
+            rb.AddForce(direction * thrustForce);
+        }
+
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            boosterFlame.SetActive(true);
+            thrusterAudio.Play();
+        }
+        else if (Mouse.current.leftButton.wasReleasedThisFrame)
+        {
+            boosterFlame.SetActive(false);
+            thrusterAudio.Stop();
+        }
+
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Destroy the player if it collides with anything
-        Destroy(gameObject);
+
+        Instantiate(explosionEffect, transform.position, transform.rotation);
+        mainMenuManager.audioSoundEffects.Add(explosionEffect.GetComponent<AudioSource>());
+        SoundManager.Instance.ApplySound();
+        borderParent.SetActive(false);
+        gameObject.SetActive(false);
+        uIDocument.enabled = false;
+        gameOverManager.ApplyScore(score);
+        Debug.Log("Game Over (Player Controller)");
+        gameOverManager.activateGameOverPanel(true);
+
     }
+
 }
