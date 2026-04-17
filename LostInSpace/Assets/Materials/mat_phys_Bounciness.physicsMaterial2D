@@ -9,6 +9,6 @@ PhysicsMaterial2D:
   m_Name: mat_phys_Bounciness
   serializedVersion: 2
   friction: 0.4
-  bounciness: 2.5999985
+  bounciness: 2.7999983
   m_FrictionCombine: 1
   m_BounceCombine: 4

@@ -5224,34 +5224,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
-    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 1339883644775116176, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: gameOverPanel
       value: 
-      objectReference: {fileID: 21300018, guid: a5f55b36d5d639a4f96ad12950ab6f0f, type: 3}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 232604563}
+    - target: {fileID: 1339883644775116176, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 1000953656}
+    - target: {fileID: 1339883644775116176, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: pauseMenuPanel
+      value: 
+      objectReference: {fileID: 1674789443}
     - target: {fileID: 2420873115371464007, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.79
@@ -5296,14 +5280,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -8586866638032658129, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 232604563}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 1000953656}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: pauseMenuPanel
+      value: 
+      objectReference: {fileID: 1674789443}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3546322784210977509, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1030453440}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
 --- !u!4 &251085058 stripped
 Transform:
@@ -5358,7 +5350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -6489,23 +6481,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672015943}
   m_CullTransparentMesh: 1
---- !u!1 &689181922 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3546322784210977509, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-  m_PrefabInstance: {fileID: 1082062024}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &689181927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689181922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 472612fd9abe38346a163d60186cb044, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Asteroids
 --- !u!1 &698529861
 GameObject:
   m_ObjectHideFlags: 0
@@ -6697,11 +6672,6 @@ MonoBehaviour:
   soundButton: {fileID: 1689222659}
   scoreText: {fileID: 825581991}
   highScoreText: {fileID: 1192572942}
---- !u!1 &747805348 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3546322784210977509, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-  m_PrefabInstance: {fileID: 1785567794}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &754179992 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2420873115371464007, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
@@ -7416,23 +7386,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000953656}
   m_CullTransparentMesh: 1
---- !u!1 &1030453435 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3546322784210977509, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-  m_PrefabInstance: {fileID: 251085057}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1030453440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030453435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 472612fd9abe38346a163d60186cb044, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Asteroids
 --- !u!1001 &1082062024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7441,34 +7394,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
-    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300020, guid: a5f55b36d5d639a4f96ad12950ab6f0f, type: 3}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2420873115371464007, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.634186
@@ -7509,18 +7434,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -53.008
       objectReference: {fileID: 0}
+    - target: {fileID: 2963920814928922639, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 232604563}
+    - target: {fileID: 2963920814928922639, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 1000953656}
+    - target: {fileID: 2963920814928922639, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: pauseMenuPanel
+      value: 
+      objectReference: {fileID: 1674789443}
     - target: {fileID: 3546322784210977509, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_Name
       value: Asteroid (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -8586866638032658129, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 232604563}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 1000953656}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: pauseMenuPanel
+      value: 
+      objectReference: {fileID: 1674789443}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3546322784210977509, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 689181927}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
 --- !u!1 &1084519100
 GameObject:
@@ -8484,23 +8429,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1213232902}
   m_CullTransparentMesh: 1
---- !u!1 &1331437531 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3546322784210977509, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-  m_PrefabInstance: {fileID: 1976161256}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1331437536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1331437531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 472612fd9abe38346a163d60186cb044, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Asteroids
 --- !u!1 &1350000940
 GameObject:
   m_ObjectHideFlags: 0
@@ -8641,34 +8569,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
-    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300016, guid: a5f55b36d5d639a4f96ad12950ab6f0f, type: 3}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2420873115371464007, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.2038794
@@ -8713,14 +8613,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -8586866638032658129, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+    - target: {fileID: 5380862155208252371, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 232604563}
+    - target: {fileID: 5380862155208252371, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 1000953656}
+    - target: {fileID: 5380862155208252371, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: pauseMenuPanel
+      value: 
+      objectReference: {fileID: 1674789443}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 232604563}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 1000953656}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: pauseMenuPanel
+      value: 
+      objectReference: {fileID: 1674789443}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3546322784210977509, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1701254820}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
 --- !u!1 &1387968931
 GameObject:
@@ -9722,23 +9642,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689222657}
   m_CullTransparentMesh: 1
---- !u!1 &1701254815 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3546322784210977509, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-  m_PrefabInstance: {fileID: 1387281453}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1701254820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701254815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 472612fd9abe38346a163d60186cb044, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Asteroids
 --- !u!1 &1736404995
 GameObject:
   m_ObjectHideFlags: 0
@@ -9973,34 +9876,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
-    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300014, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2420873115371464007, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.469069
@@ -10045,14 +9920,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -8586866638032658129, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 232604563}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 1000953656}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: pauseMenuPanel
+      value: 
+      objectReference: {fileID: 1674789443}
+    - target: {fileID: 6003968984505615450, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 232604563}
+    - target: {fileID: 6003968984505615450, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 1000953656}
+    - target: {fileID: 6003968984505615450, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: pauseMenuPanel
+      value: 
+      objectReference: {fileID: 1674789443}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3546322784210977509, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1945336690}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
 --- !u!1 &1842932980
 GameObject:
@@ -10301,18 +10196,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2420873115371464007, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
   m_PrefabInstance: {fileID: 1785567794}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1945336690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747805348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 472612fd9abe38346a163d60186cb044, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Asteroids
 --- !u!1001 &1976161256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10321,34 +10204,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
-    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300022, guid: a5f55b36d5d639a4f96ad12950ab6f0f, type: 3}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2420873115371464007, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4
@@ -10393,14 +10248,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -8586866638032658129, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+    - target: {fileID: 3762396391373496565, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 232604563}
+    - target: {fileID: 3762396391373496565, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 1000953656}
+    - target: {fileID: 3762396391373496565, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: pauseMenuPanel
+      value: 
+      objectReference: {fileID: 1674789443}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 232604563}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 1000953656}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: pauseMenuPanel
+      value: 
+      objectReference: {fileID: 1674789443}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3546322784210977509, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1331437536}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
 --- !u!1 &1998846766 stripped
 GameObject:
@@ -10461,18 +10336,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2420873115371464007, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
   m_PrefabInstance: {fileID: 3696373857508956648}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2065989906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998846766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 472612fd9abe38346a163d60186cb044, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Asteroids
 --- !u!1 &2115840753
 GameObject:
   m_ObjectHideFlags: 0
@@ -10568,34 +10431,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
-    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.34
-      objectReference: {fileID: 0}
-    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300018, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2420873115371464007, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.32
@@ -10640,13 +10475,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid
       objectReference: {fileID: 0}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: gameOverPanel
+      value: 
+      objectReference: {fileID: 232604563}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 1000953656}
+    - target: {fileID: 5907763062933686407, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: pauseMenuPanel
+      value: 
+      objectReference: {fileID: 1674789443}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3546322784210977509, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2065989906}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
