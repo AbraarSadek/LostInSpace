@@ -23,6 +23,8 @@ public class PauseMenuManager : MonoBehaviour
     public GameObject gameOverPanel;
     [Header("Audio References:")]
     public Button soundButton;
+    [Header("Pause Reference")]
+    public bool isPause;
     private void Start()
     {
         if (SoundManager.Instance != null && soundButton != null)
@@ -41,6 +43,7 @@ public class PauseMenuManager : MonoBehaviour
         {
             Debug.LogWarning("PauseMenuManager: gameOverPanel is not assigned in the inspector.");
         }
+        isPause = false;
     }
     void Update()
     {
@@ -59,6 +62,7 @@ public class PauseMenuManager : MonoBehaviour
             {
                 pauseMenuPanel.SetActive(false);
                 Time.timeScale = 1f;
+                isPause = false;
             }
             else
             {
@@ -70,6 +74,7 @@ public class PauseMenuManager : MonoBehaviour
                 }
                 pauseMenuPanel.SetActive(true);
                 Time.timeScale = 0f;
+                isPause = true;
             }
         }
     }
@@ -78,6 +83,7 @@ public class PauseMenuManager : MonoBehaviour
         Debug.Log("Home button clicked. Heading Home");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1f;
+        isPause = false;
     }
     public void OnUnpauseButtonClick()
     {
@@ -87,6 +93,7 @@ public class PauseMenuManager : MonoBehaviour
             pauseMenuPanel.SetActive(false);
         }
         Time.timeScale = 1f;
+        isPause = false;
     }
     public void OnSoundButtonClick()
     {

@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     private float maxScoreSpawnRate = 200f;
     private GameOverManager gameOverManager;
     private MainMenuManager mainMenuManager;
+    private PauseMenuManager pauseMenuManager;
 
     public float thrustForce = 1f;
     public UIDocument uIDocument;
@@ -44,11 +45,13 @@ public class PlayerController : MonoBehaviour
         scoreText = uIDocument.rootVisualElement.Q<Label>("ScoreLabel");
         gameOverManager = FindFirstObjectByType<GameOverManager>();
         mainMenuManager = FindFirstObjectByType<MainMenuManager>();
+        pauseMenuManager = FindFirstObjectByType<PauseMenuManager>();   
         SoundManager.Instance.ApplySound();
     }
 
     void Update()
     {
+        if (pauseMenuManager.isPause) return;
         UpdateScore();
         MovePlayer();
     }
