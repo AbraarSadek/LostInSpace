@@ -5224,6 +5224,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
+    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.16
+      objectReference: {fileID: 0}
     - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5743,6 +5751,7 @@ MonoBehaviour:
   mainMenuPanel: {fileID: 1000953656}
   gameOverPanel: {fileID: 232604563}
   soundButton: {fileID: 604909975}
+  isPause: 0
 --- !u!1 &552326115
 GameObject:
   m_ObjectHideFlags: 0
@@ -7432,6 +7441,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
+    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.18
+      objectReference: {fileID: 0}
     - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -8624,6 +8641,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
+    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.22
+      objectReference: {fileID: 0}
     - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -9948,6 +9973,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
+    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.16
+      objectReference: {fileID: 0}
     - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10288,6 +10321,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
+    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.14
+      objectReference: {fileID: 0}
     - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10510,9 +10551,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 401bbfb706fe7d643a5a50456aa76f62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  thrustForce: 1.2
+  thrustForce: 2
   uIDocument: {fileID: 796493232}
-  scoreMultiplier: 2
   explosionEffect: {fileID: 8539825100101391090, guid: 95a00d4f8485c9a46ae21ced58f38d1e, type: 3}
   boosterFlame: {fileID: 1736404995}
   thrusterAudio: {fileID: 1387968934}
@@ -10528,6 +10568,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1884331216}
     m_Modifications:
+    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175391640457871514, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.16
+      objectReference: {fileID: 0}
     - target: {fileID: 2392142433396417591, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -10592,8 +10640,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -8586866638032658129, guid: 1e2407f4a14aa3e4daed61cbfd782937, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
